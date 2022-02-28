@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", Helvetica, sans-serif;
+}
+
+body {
+	background: #d82148;
+}
+
+header {
+	background-color: #151d3b;
+	height: clamp(100px, 10vh, 5rem);
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0px 7px 5px rgb(31, 31, 31);
+	width: 100vw;
+}
+
+.main {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	margin: max(5vh) max(10vw);
+}
+
+.add {
+	width: clamp(150px, 5vw, 200px);
+	height: clamp(50px, 5vh, 100px);
+	background-color: #6ebf8b;
+	border: none;
+	font-size: clamp(1rem, 2vw, 1.3rem);
+	border-radius: 8px;
+	font-weight: 800;
+	cursor: pointer;
+	color: whitesmoke;
+	box-shadow: 0px 0px 5px black;
+	transition: 0.2s;
+}
+
+.add:hover {
+	transform: scale(1.03);
+	background-color: #dadbbd;
+	color: #151d3b;
+}
+
+.add:active {
+	transform: scale(1);
+	background-color: #bbbba3;
+}
+
+.book-holder {
+	width: 100%;
+	height: 70vh;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(40%, 250px));
+	grid-template-rows: repeat(auto-fit, minmax(30%, 200px));
+	grid-gap: 10px;
+	margin-top: min(2rem);
+	overflow: auto;
+	justify-content: center;
+}
+
+.book-card {
+	border-radius: 8px;
+	background-color: #f3f0e9;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 10px max(15px);
+	box-shadow: 3px 3px 5px black;
+	gap: 1rem;
+	position: relative;
+}
+
+.book-card input {
+	display: none;
+}
+
+.book-card img {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	cursor: pointer;
+}
+
+.book-card img:hover {
+	transform: scale(1.1, 1.1);
+}
+
+.book-card img:active {
+	transform: scale(1, 1);
+}
+
+.toggle {
+	display: flex;
+	gap: 1ch;
+}
+
+.toggle label {
+	width: 50px;
+	height: 25px;
+	background-color: #d82148;
+	border-radius: 15px;
+	display: flex;
+	align-items: center;
+	box-shadow: 0px 0px 3px black;
+	transition: 0.2s;
+}
+
+.toggle label::before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background-color: #d82148;
+	border: 2px solid white;
+	border-radius: 50%;
+	transition: 0.2s;
+	cursor: pointer;
+}
+
+.toggle input:checked ~ label::before {
+	transform: translateX(100%);
+	background-color: #6ebf8b;
+}
+
+.toggle input:checked ~ label {
+	background-color: #6ebf8b;
+}
