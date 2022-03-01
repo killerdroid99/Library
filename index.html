@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <script src="./app.js" defer></script>
     <title>Library</title>
 </head>
 
@@ -15,7 +14,7 @@
         <h1>My Library</h1>
     </header>
     <div class="main">
-        <button class="add">
+        <button class="add" id="addbtn">
             Add Book
         </button>
         <div class="book-holder">
@@ -29,61 +28,32 @@
                     Total Pages: 295
                 </strong>
                 <span class="toggle">
-                    Completed!
                     <input type="checkbox" id="read1">
                     <label for="read1"></label>
-                </span>
-            </div>
-
-            <div class="book-card">
-                <img src="./images/trash-can.svg">
-                <h2>The Hobbit </h2>
-                <strong>
-                    Author: J.R.R. Tolkien
-                </strong>
-                <strong>
-                    Total Pages: 295
-                </strong>
-                <span class="toggle">
-                    Completed!
-                    <input type="checkbox" id="read2">
-                    <label for="read2"></label>
-                </span>
-            </div>
-
-            <div class="book-card">
-                <img src="./images/trash-can.svg">
-                <h2>The Hobbit </h2>
-                <strong>
-                    Author: J.R.R. Tolkien
-                </strong>
-                <strong>
-                    Total Pages: 295
-                </strong>
-                <span class="toggle">
-                    Completed!
-                    <input type="checkbox" id="read3">
-                    <label for="read3"></label>
-                </span>
-            </div>
-
-            <div class="book-card">
-                <img src="./images/trash-can.svg">
-                <h2>The Hobbit </h2>
-                <strong>
-                    Author: J.R.R. Tolkien
-                </strong>
-                <strong>
-                    Total Pages: 295
-                </strong>
-                <span class="toggle">
-                    Completed!
-                    <input type="checkbox" id="read4">
-                    <label for="read4"></label>
+                    <p></p>
                 </span>
             </div>
         </div>
     </div>
+    <div class="overlay">
+        <div class="info">
+            <img src="./images/close.svg" id="close">
+            <form>
+                <label for="titleName">Enter title of the book<span>*</span></label>
+                <input type="text" id="titleName" maxlength="50ch" minlength="1ch" title="max character: 50">
+                <label for="authorName">Enter its author name<span>*</span></label>
+                <input type="text" id="authorName" maxlength="25ch" minlength="1ch" title="max character: 25">
+                <label for="totalPages">Enter total number of pages<span>*</span></label>
+                <input type="number" id="totalPages" min="1" max="10000">
+                <label for="completed">Completed reading it?</label>
+                <input type="checkbox" id="completed">
+                <button class="add" id="submit" type="button">Submit</button>
+            </form>
+        </div>
+    </div>
+
+
 </body>
+<script src="./app.js"></script>
 
 </html>
