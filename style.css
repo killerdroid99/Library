@@ -91,7 +91,6 @@ header {
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	width: 100%;
 }
 
 .book-card input {
@@ -190,6 +189,14 @@ form input {
 	border-radius: 10px;
 	box-shadow: 3px 3px 5px black;
 	padding: 5px;
+	font-weight: bold;
+}
+
+#completed {
+	cursor: pointer;
+	width: 20px;
+	height: 20px;
+	background-color: #6ebf8b;
 }
 
 form button {
