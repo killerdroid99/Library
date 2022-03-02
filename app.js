@@ -18,6 +18,12 @@ function addBookToLibrary() {
 			outCard.className = "book-card";
 			outCard.id = `card-${book.id}`;
 
+			let strip = document.createElement("div");
+			strip.className = "strip";
+			strip.style.backgroundColor = `rgb(${Math.random() * 255}, ${
+				Math.random() * 255
+			}, ${Math.random() * 255})`;
+
 			let img = document.createElement("img");
 			img.src = "./images/trash-can.svg";
 			img.className = "delete";
@@ -51,6 +57,7 @@ function addBookToLibrary() {
 			span.appendChild(toggleLabel);
 			span.appendChild(para);
 
+			outCard.appendChild(strip);
 			outCard.appendChild(img);
 			outCard.appendChild(h2);
 			outCard.appendChild(strong1);
@@ -115,5 +122,9 @@ submit.addEventListener("click", function () {
 		addBookToLibrary();
 
 		document.querySelector(".overlay").style.cssText = "visibility: hidden";
+		(titleName.value = ""),
+			(authorName.value = ""),
+			(totalPages.value = ""),
+			(completed.checked = false);
 	}
 });

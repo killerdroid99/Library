@@ -74,10 +74,20 @@ header {
 	flex-direction: column;
 	align-items: center;
 	padding: 10px max(15px);
-	box-shadow: 3px 3px 5px black;
+	box-shadow: 3px 3px 5px rgb(0, 0, 0);
 	gap: 1rem;
 	position: relative;
-	transition: 0.5s;
+}
+
+.strip {
+	display: block;
+	position: absolute;
+	height: 100%;
+	width: 15px;
+	left: 0;
+	top: 0;
+	border-top-left-radius: 7px;
+	border-bottom-left-radius: 7px;
 }
 
 .book-card h2 {
