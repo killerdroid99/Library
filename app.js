@@ -1,5 +1,4 @@
 let myLibrary = [];
-
 function Book(id, title, author, totalPages, readStatus) {
 	this.id = id;
 	this.title = title;
@@ -81,6 +80,7 @@ function deleteBook(book) {
 		document.getElementById("card-" + book.id).remove();
 		myLibrary = myLibrary.filter((obj) => obj.id !== book.id);
 		id = myLibrary.length;
+		localStorage.setItem("myLibrary", JSON.stringify(myLibrary));
 	});
 }
 
@@ -118,6 +118,7 @@ submit.addEventListener("click", function () {
 			completed.checked
 		);
 		myLibrary.push(book);
+		localStorage.setItem("myLibrary", JSON.stringify(myLibrary));
 
 		addBookToLibrary();
 
